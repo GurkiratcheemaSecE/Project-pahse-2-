@@ -1,5 +1,5 @@
 # Project-pahse-2-
-Used boot strap for these features
+Used bootstrap for these features
 Navbar: The navigation bar adapts to different screen sizes, turning into a hamburger menu on smaller devices for better usability.
 Buttons: We styled buttons consistently across the website with Bootstrap's button classes, ensuring they look good and are easily clickable.
 Modal: The sign-in form pops up in a modal, a centered overlay that keeps the focus on the form until it's closed, enhancing user engagement.
