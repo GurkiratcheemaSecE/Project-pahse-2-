@@ -1,69 +1,73 @@
-/*Nave bar styling*/
+/* Navbar styling */
 .navbar {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1rem;
 }
 
-
-/* Logo and Nike text in the center */
 .navbar-brand {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     font-weight: bold;
     color: #111 !important; /* Making the brand name stand out */
 }
 
-.navbar .sign-in-btn {
-    position: right;
-    right: 1rem; 
-    padding: 0.375rem 0.75rem;
+.navbar .btn {
+    margin-left: 1rem;
 }
-/* slogan section */
+
+/* Slogan section styling */
 .slogan-section {
-    font-weight: lighter;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 3rem;
     background-color: #181a1f;
     color: #bab5b1;
     text-align: left;
 }
 
-.slogan-section img {
-    max-width: 300px;
-    border-radius: 10px;
-    margin-left: 2rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-/* Footer styling */
-footer {
-    color: black;
-}
-
-.footer-logo {
-    margin-bottom: 2.5rem;
-}
-
-.footer h5 {
-    font-size: 14px;
-    color: #181a1f;
+.slogan-section h2 {
+    font-weight: lighter;
     margin-bottom: 2rem;
 }
 
+.slogan-section p {
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.slogan-section img {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Footer styling */
+footer {
+    background-color: #f8f9fa;
+    color: #343a40;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer h5 {
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+}
+
 .footer a {
-    color: #615c57;
+    color: #000000 !important; 
+    text-decoration: none;
 }
 
 .footer a:hover {
-    color: #1a1816;
+    color: #333!important;; 
 }
-.card .carousel-inner img {
-    height: 500px;
-    object-fit: cover;
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 1.5rem;
 }
+
+/* Dark mode */
 body.dark-mode {
     background-color: #333;
     color: #fff;
@@ -73,10 +77,19 @@ body.dark-mode {
     background-color: #222;
     color: #fff;
 }
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar .btn {
+        margin-left: 0;
+    }
+
     .slogan-section {
-        flex-direction: column;
         text-align: center;
     }
 
