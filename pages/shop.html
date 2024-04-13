@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" sizes="128x128" href="../images/logo.jpg">
+    <title>Nike Shopping Zone</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">NIKE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="../pages/index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="../pages/collections.html">Our Collections</a>
+                <a class="nav-item nav-link" href="../pages/athletic.html">Our Alethes</a>
+                <a class="nav-item nav-link" href="../pages/history.html">Our History</a>
+                <a class="nav-item nav-link" href="../pages/shop.html">Shop Now</a>
+                <a class="nav-item nav-link" href="../pages/contact.html">Reach Out / Get Help</a>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signInModal">Sign In</button>
+        <button class="mode-toggle">Dark Mode</button>
+    </nav>
+    <aside class="col-md-4">
+        <div id="cartSection">
+            <h2>Current Cart</h2>
+            <ul id="cart" class="list-group"></ul>
+            <h3>Total: $<span id="total">0</span></h3>
+            <button class="btn btn-success" onclick="checkout()">Checkout</button>
+        </div>
+    </aside>
+    </div>
+</div>
+    <main class="container">
+        <h1 class="mt-5">Nike Shopping Zone</h1>
+        <div class="filter-controls mb-3">
+            <button class="btn btn-primary filter-btn" data-filter="all">All</button>
+            <button class="btn btn-primary filter-btn" data-filter="dunk">Dunk</button>
+            <button class="btn btn-primary filter-btn" data-filter="af">Air Force</button>
+            <button class="btn btn-primary filter-btn" data-filter="max">Air Max</button>
+            <button class="btn btn-primary filter-btn" data-filter="new">New Releases</button>
+        </div>               
+        <div class="row product-grid">
+        </div>
+    </main>
+    <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input type="text" id="username" placeholder="Username" class="form-control mb-2">
+              <input type="password" id="password" placeholder="Password" class="form-control mb-2">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="signInBtn">Sign In</button>
+            </div>
+          </div>
+        </div>
+      </div>
+ <!-- Footer -->
+ <footer class="footer bg-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h5>About Nike</h5>
+                <p>Empowering athletes everywhere, Nike delivers innovative products, experiences, and services.</p>
+                <img src="../images/logo.jpg" alt="Nike Logo" class="footer-logo" style="max-width: 150px;">
+            </div>
+            <div class="col-md-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Join Us</a></li>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Shop Now</a></li>
+                    <li><a href="#">Our Collections</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Follow Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Subscribe for Updates</h5>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary mt-3">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col text-center">
+                <p><a href="#">Legal</a> | <a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="../js/collections.js"></script>
+<script src="../js/login.js"></script>
+<script src="../js/darkmode.js"></script>
+</body>
+</html>
