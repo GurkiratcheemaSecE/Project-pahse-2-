@@ -49,3 +49,12 @@ body {
     width: 30%;
     margin-bottom: 20px;
   }
+  #collections{
+    display: flex;
+    margin-top: 5em;
+    padding-top: 5em;
+  }  
+  #collections img{
+   margin-right: 17em;
+   height: 25em;
+  }  
