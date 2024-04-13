@@ -1,12 +1,12 @@
 $(document).ready(function() {
     // data for the products
     const products = [
-        { id: 1, name: "Nike Dunk Low Retro", description: "Men's Shoe", category: "dunk", price: "$150", imageUrl: "../collections_img/j1.jpg" },
+        { id: 1, name: "Nike Dunk Low Retro", description: "Men's Shoe", category: "dunk", price: "$150", imageUrl: "../collections_img/j1.png" },
         { id: 2, name: "Nike Dunk SE", description: "Easy On/Off", category: "dunk",price: "$310", imageUrl: "../collections_img/j12.png" },
         { id: 3, name: "Nike Dunk Low Retro (Black)", description: "Men's Shoe", category: ["dunk", "new"],price: "$250", imageUrl: "../collections_img/j2.png" },
         { id: 4, name: "Nike Dunk Low Retro (PRO)", description: "Skate Shoe", category: "dunk",price: "$150", imageUrl: "../collections_img/j3.png" },
         { id: 5, name: "Nike Dunk Low Retro SE", description: "Skate Shoe", category: "dunk", price: "$153",imageUrl: "../collections_img/j4.png" },
-        { id: 6, name: "Nike Dunk Low Retro UNLOCK BY YOU", description: "Men's Shoe", category: "dunk",price: "$310", imageUrl: "../collections_img/j5.png" },
+        { id: 6, name: "Nike Dunk Low Retro UNLOCK BY YOU", description: "Men's Shoe", category: "dunk",price: "$310", imageUrl: "../collections_img/j5.jpg" },
         { id: 7, name: "Nike Dunk Low Retro XXX3", description: "Men's Shoe", category: ["dunk", "new"], price: "$1520",imageUrl: "../collections_img/j6.png" },
         { id: 8, name: "Nike Dunk Low Retro KARASHTH", description: "Men's Shoe", category: "dunk", price: "$140",imageUrl: "../collections_img/j7.png" },
         { id: 9, name: "Nike Dunk Low Retro SE", description: "Men's Shoe", category: "dunk", price: "$350", imageUrl: "../collections_img/j8.png" },
