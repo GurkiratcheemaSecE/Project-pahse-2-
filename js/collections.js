@@ -37,13 +37,24 @@ $(document).ready(function() {
         { id: 33, name: "Nike Air MAX ", description: "Men's Shoe", category: "max", price: "$265", imageUrl: "../collections_img/B10.png" },
         { id: 34, name: "Nike Air MAX V", description: "Men's Shoe", category: "max", price: "$421", imageUrl: "../collections_img/B11.png" },
         { id: 35, name: "Nike Air MAX 21", description: "Men's Shoe", category: "new", price: "$231", imageUrl: "../collections_img/B12.png" },
+        { id: 36, name: "Nike AM Plus (W)", description: "Men's Shoe", category: ["max", "sale"], price: "$250", sale: true, originalPrice: "$331", imageUrl: "../collections_img/S1.png" },
+        { id: 37, name: "Nike Air Max PulseV", description: "Unisex", category: ["sale", "new"], price: "$212", sale: true, originalPrice: "$314", imageUrl: "../collections_img/S2.png" },
+        { id: 38, name: "Nike Air Force 1 SAWX", description: "Men's Shoe", category: ["sale", "new"], price: "$150", sale: true, originalPrice: "$300", imageUrl: "../collections_img/S3.png" },
+        { id: 39, name: "Nike Dunk Low Retro ", description: "Men's Shoe", category: ["sale", "new"], price: "$130", sale: true, originalPrice: "$240", imageUrl: "../collections_img/S4.png" },
+        { id: 40, name: "Nike DunkVaporMax React ", description: "Men's Shoe", category: ["sale", "new"], price: "$120", sale: true, originalPrice: "$210", imageUrl: "../collections_img/S5.png" },
+        { id: 41, name: "Nike Blazer React", description: "Men's Shoe", category: ["sale", "new"], price: "$250", sale: true, originalPrice: "$340", imageUrl: "../collections_img/S6.png" },
+        { id: 42, name: "Nike Blazer X", description: "Men's Shoe", category: ["sale", "new"], price: "$440", sale: true, originalPrice: "$600", imageUrl: "../collections_img/S7.png" },
+        { id: 43, name: "Nike Pegasus Ultra", description: "Men's Shoe", category: ["sale", "new"], price: "$420", sale: true, originalPrice: "$740", imageUrl: "../collections_img/S8.png" },
+        { id: 44, name: "Nike Pegasus Elite", description: "Men's Shoe", category: ["sale", "new"], price: "$650", sale: true, originalPrice: "$880", imageUrl: "../collections_img/S9.png" },
+        { id: 45, name: "Nike Blazer One", description: "Men's Shoe", category: ["sale", "new"], price: "$220", sale: true, originalPrice: "$420", imageUrl: "../collections_img/S10.png" },
+        { id: 46, name: "Nike Agehaozero", description: "Men's Shoe", category: ["sale", "new"], price: "$210", sale: true, originalPrice: "$360", imageUrl: "../collections_img/S11.png" },
+
     ]; 
     // Function to display products
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
     function displayProducts(filter = 'all') {
-        const filteredProducts = products.filter(product => 
-            filter === 'all' || product.category.includes(filter) 
-        );
-    
+        const filteredProducts = products.filter(product => filter === 'all' || product.category.includes(filter));
         const productHTML = filteredProducts.map(product => `
             <div class="col-md-4">
                 <div class="card">
@@ -51,18 +62,50 @@ $(document).ready(function() {
                     <div class="card-body">
                         <h5 class="card-title">${product.name}</h5>
                         <p class="card-text">${product.description}</p>
-                        <p class="card-text"><strong>Price: ${product.price}</strong></p>
-                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        ${product.sale ? `<p class="card-text"><strike>${product.originalPrice}</strike> <strong>${product.price}</strong></p>` : `<p class="card-text"><strong>${product.price}</strong></p>`}
+                        <button onclick="addToCart(${product.id})" class="btn btn-primary">Add to Cart</button>
                     </div>
                 </div>
             </div>
         `).join('');
-    
         $('.product-grid').html(productHTML);
+    }    
+    // Cart Function
+    function updateCart() {
+        let cartHTML = cart.map(item => {
+            const product = products.find(p => p.id === item.id);
+            return `
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    ${product.name}
+                    <span class="badge badge-primary badge-pill">${item.quantity} x ${product.price}</span>
+                </li>
+            `;
+        }).join('');
+        $('#cart').html(cartHTML);
+        updateTotal();
     }
-    
-    // Initial display of all products
+
+    function updateTotal() {
+        const total = cart.reduce((acc, item) => {
+            const product = products.find(p => p.id === item.id);
+            return acc + (parseFloat(product.price.replace('$', '')) * item.quantity);
+        }, 0);
+        $('#total').text(total.toFixed(2));
+    }
+
+    window.addToCart = function(productId) {
+        const cartItem = cart.find(item => item.id === productId);
+        if (cartItem) {
+            cartItem.quantity += 1;
+        } else {
+            cart.push({ id: productId, quantity: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCart();
+    };
+
     displayProducts();
+    updateCart();
     
     // Filter buttons functionality
     $('.filter-btn').on('click', function() {
