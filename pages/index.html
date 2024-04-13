@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" sizes="128x128" href="../images/logo.jpg">
+    <title>Nike - Just Don't Do It!</title>
+</head>
+<body>
+    <!-- Navbar - Updated with Bootstrap classes -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">NIKE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="../pages/index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="../pages/collections.html">Our Collections</a>
+                <a class="nav-item nav-link" href="../pages/athletic.html">Our Alethes</a>
+                <a class="nav-item nav-link" href="../pages/history.html">Our History</a>
+                <a class="nav-item nav-link" href="../pages/shop.html">Shop Now</a>
+                <a class="nav-item nav-link" href="../pages/contact.html">Reach Out / Get Help</a>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signInModal">Sign In</button>
+        <button class="mode-toggle">Dark Mode</button>
+    </nav>
+    <!-- Main Content -->
+
+    <main class="container">
+        <div class="row">
+            <div class="col-12 home-section text-center">
+                <img src="../images/v1_34.png" alt="Featured Collection" class="img-fluid mx-auto d-block home-image">
+                <h1 class="home-title">Just Don't Do It.</h1>
+                <p class="home-text">Inspiration for every athlete.</p>
+                <a href="../Pages/our_collections.html" class="btn home-btn">Discovery More</a>
+            </div>
+        </div>        
+        <!-- ... Other sections ... -->
+        <section class="feature-section py-5">
+            <div class="container">
+                <h2 class="text-left mb-4">Step Into the Future</h2>
+                <div class="row">
+                    <!-- Latest Collection / New Arrivals -->
+                    <div class="col-md-6">
+                        <div class="card border-right">
+                            <div id="carouselLatest" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="../images/s1.webp" alt="Latest Collection">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/s2.jpg" alt="Latest Collection">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/s3.jpg" alt="Latest Collection">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/s4.jpg" alt="Latest Collection">
+                                    </div>
+                                 <!-- Add more items belows -->
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselLatest" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselLatest" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">UPCOMING SNEAKERS</h5>
+                                <p class="card-text">Upcoming release, be the first person and reverse a spot.</p>
+                                <a href="../Pages/new_arrivals.html" class="btn btn-primary">Upcoming Releases</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second Box: Sport Section -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div id="carouselSports" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="../images/v1_58.png" alt="Sports Gear">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/v1_69.png" alt="Sports Gear">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/v1111.webp" alt="Sports Gear">
+                                    </div>
+                                    <!-- Add more items -->
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselSports" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselSports" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">SPORT COLLECTIONS</h5>
+                                <p class="card-text">Sport Spot for Sport Folks.</p>
+                                <a href="../Pages/sport_section.html" class="btn btn-primary">Explore Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="athlete-spotlight py-5 bg-black">
+            <div class="container">
+                <h2 class="text-left mb-4">Athlete Spotlight</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <!-- Athlete Images -->
+                        <div id="carouselAthleteSpotlight" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="../images/a1.jpg" alt="Athlete 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="../images/a2.jpg" alt="Athlete 2">
+                                </div>
+                                <!-- Add more items -->
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselAthleteSpotlight" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselAthleteSpotlight" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <div class="athlete-story mt-4">
+                            <h3 class="text-center">The Journey of Champions</h3>
+                            <h2 class="text-left"><u>Bebe Vio</u></h3>
+                            <p class="text-left">A Catalyst for Change Bebe Vio knows no bounds. She redefined victory to become the world's top wheelchair fencer. Now, the Italian athlete is a catalyst for change, inspiring millions with her resilience and determination.</p>
+                            <h2 class="text-right"><u>Marcus Rashford</u></h3>
+                            <p class="text-right">Meet Nike athlete Marcus Rashford—a football player dedicated to changing the game. Explore his iconic footwear and latest stories. Rashford is not just a player on the field but also a hero off it, dedicated to making a difference in the lives of children.</p>
+                            <p class="text-center    small">Last updated by date: 9 April 2024</p>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Latest Sneaker Drop Section-->
+        <section class="latest-sneaker-drop py-5">
+            <div class="container">
+                <h2 class="text-left mb-4">Latest Sneaker Drops</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card sneaker-card">
+                            <img src="../images/n1.png" class="card-img-top" alt="Nike Air Max 1 SC">
+                            <div class="card-body">
+                                <h5 class="card-title">Nike Air Max 1 SC</h5>
+                                <p class="card-text">Release Date: 2024-04-10</p>
+                                <a href="../Pages/MOCK" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card sneaker-card">
+                            <img src="../images/n2.jpg" class="card-img-top" alt="Nike Air Max 1 SC">
+                            <div class="card-body">
+                                <h5 class="card-title">Air Jordan 1 Retro High</h5>
+                                <p class="card-text">Release Date: 2024-04-14</p>
+                                <a href="./Pages/MOCK" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card sneaker-card">
+                            <img src="../images/n3.jpg" class="card-img-top" alt="Nike Air Max 1 SC">
+                            <div class="card-body">
+                                <h5 class="card-title">Air Jordan 4 Retro</h5>
+                                <p class="card-text">Release Date: 2024-04-19</p>
+                                <a href="../Pages/MOCK" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>        
+        <!-- Slogan Section -->
+        <section class="slogan-section py-5 bg-dark text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h2>"Nike never disappoints. Every shoe feels like it's made just for me."</h2>
+                        <p>- Ava Smith, Professional Runner</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="../images/v1_111.png" alt="Slogan Image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!-- Sign In Modal -->
+        <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <input type="text" id="username" placeholder="Username" class="form-control mb-2">
+                <input type="password" id="password" placeholder="Password" class="form-control mb-2">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="signInBtn">Sign In</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <footer class="footer bg-white py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h5>About Nike</h5>
+                        <p>Empowering athletes everywhere, Nike delivers innovative products, experiences, and services.</p>
+                        <img src="../images/logo.jpg" alt="Nike Logo" class="footer-logo" style="max-width: 150px;">
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Join Us</a></li>
+                            <li><a href="#">Our Mission</a></li>
+                            <li><a href="#">Shop Now</a></li>
+                            <li><a href="#">Our Collections</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Follow Us</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Subscribe for Updates</h5>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <button type="submit" class="btn btn-primary mt-3">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col text-center">
+                        <p><a href="#">Legal</a> | <a href="#">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>        
+        
+    </main>
+    <!-- Bootstrap JS and  JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+</html>
