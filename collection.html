@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" sizes="128x128" href="images/images.png">
+    <title>Nike - Just Don't Do It!</title>
+</head>
+<body>
+    <!-- Navbar - Updated with Bootstrap classes -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="./pages/collections.html">Our Collections</a>
+                <a class="nav-item nav-link" href="./pages/athletes.html">Our Alethes</a>
+                <a class="nav-item nav-link" href="./pages/history.html">Our History</a>
+                <a class="nav-item nav-link" href="./pages/shop.html">Shop Now</a>
+                <a class="nav-item nav-link" href="./pages/contact.html">Reach Out / Get Help</a>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary mr-4" data-toggle="modal" data-target="#signInModal">Sign In</button>
+        <button class="mode-toggle">Dark Mode</button>
+    </nav>
+
+    <!-- hero section -->
+     
+    <div class="hero">
+      <h1>our collection</h1>
+      <p>Success isn't given. It's earned. On the track, on the field, in the gym</p>
+  </div>
+
+
+   <!-- collection section -->
+
+  
+  <h1 div class="title mt-5 "> our collection</h1>
+  <div class="container mt-4 d-flex m-5">
+  <div class="row">
+    <div class="col md-3 mt-5">
+    <div class="card">
+    <img src="images/airmax.png" class="card img-top w-100"/>
+    <div class="card-body">
+    <h2 class="card-title text-dark">Nike Air Max</h2>
+    <div class="d-flex justify-content-between">
+    <p class="card-text text-dark">shoes</p>
+    <p class="card-text mr-4 text-success">$100</p>
+    </div>
+    <p class="card-text text-dark">5 Colour</p>
+    <a href="#" class="card-link text-success" data-toggle="modal" data-target="#modalid">more</a>
+    </div>
+    </div>
+  </div>
+    <div class="col md-3 mt-5">
+    <div class="card">
+    <img src="images/Nike dunks.png" class="card img-top w-100"/>
+    <div class="card-body">
+    <h2 class="card-title text-dark">Nike dunks</h2>
+    <div class="d-flex justify-content-between">
+    <p class="card-text text-dark">shoes</p>
+    <p class="card-text mr-4 text-success">$100</p>
+    </div>
+    <p class="card-text text-dark">1 Colour</p>
+    <a href="#" class="card-link text-success" data-toggle="modal" data-target="#modalid">more</a>
+    </div>
+    </div>
+  </div>
+    <div class="col md-3 mt-5">
+    <div class="card">
+    <img src="images/Air Jordan lows.png" class="card img-top w-100"/>
+    <div class="card-body">
+    <h2 class="card-title text-dark">Air Jordan lows</h2>
+    <div class="d-flex justify-content-between">
+    <p class="card-text text-dark">shoes</p>
+    <p class="card-text mr-4 text-success">$100</p>
+    </div>
+    <p class="card-text text-dark">2 Colour</p>
+    <a href="#" class="card-link text-success" data-toggle="modal" data-target="#modalid">more</a>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+   
+        
+        </section>        
+        <!-- Slogan Section -->
+        <section class="slogan-section py-5 bg-dark text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h2>"Who said man was not meant to fly"</h2>
+                        <p>- Michael Jordan</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/retronike.jpg" alt="Slogan Image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!-- Sign In Modal -->
+        <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <input type="text" id="username" placeholder="Username" class="form-control mb-2">
+                <input type="password" id="password" placeholder="Password" class="form-control mb-2">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="signInBtn">Sign In</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <footer class="footer bg-light py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h5>About Nike</h5>
+                        <p>Empowering athletes everywhere, Nike delivers innovative products, experiences, and services.</p>
+                        <img src="images/nike-logo.svg" alt="Nike Logo" class="footer-logo" style="max-width: 150px;">
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Join Us</a></li>
+                            <li><a href="#">Our Mission</a></li>
+                            <li><a href="#">Shop Now</a></li>
+                            <li><a href="#">Our Collections</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Follow Us</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Subscribe for Updates</h5>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <button type="submit" class="btn btn-primary mt-3">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col text-center">
+                        <p><a href="#">Legal</a> | <a href="#">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>        
+        
+    </main>
+    <!-- Bootstrap JS and  JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/darkmode.js"></script>
+</body>
+</html>
