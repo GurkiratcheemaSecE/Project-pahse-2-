@@ -42,6 +42,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 50px;
+    background-color: rgba(24, 33, 56, 1);
   }
 
   .nike-images img {
