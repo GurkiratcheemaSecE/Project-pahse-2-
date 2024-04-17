@@ -2,7 +2,7 @@ $(document).ready(function() {
     // data for the products
     const products = [
         { id: 0, name: "Nike Dunk Low Retro", description: "Men's Shoe", category: "dunk", price: "$150", imageUrl: "../collections_img/J1.png" },
-        { id: 1, name: "Nike Dunk SE", description: "Easy On/Off", category: "dunk",price: "$310", imageUrl: "../collections_img/j12.png" },
+        { id: 1, name: "Nike Dunk SE", description: "Easy On/Off", category: "dunk",price: "$310", imageUrl: "../collections_img/j2.png" },
         { id: 2, name: "Nike Dunk Low Retro (Black)", description: "Men's Shoe", category: ["dunk", "new"],price: "$250", imageUrl: "../collections_img/J2.png" },
         { id: 3, name: "Nike Dunk Low Retro (PRO)", description: "Skate Shoe", category: "dunk",price: "$150", imageUrl: "../collections_img/J3.png" },
         { id: 4, name: "Nike Dunk Low Retro SE", description: "Skate Shoe", category: "dunk", price: "$153",imageUrl: "../collections_img/J4.png" },
