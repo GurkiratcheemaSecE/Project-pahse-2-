@@ -1,8 +1,7 @@
 $(document).ready(function() {
     // data for the products
     const products = [
-        { id: 0, name: "Nike Dunk Low Retro", description: "Men's Shoe", category: "dunk", price: "$150", imageUrl: "../collections_img/J1.png" },
-        { id: 1, name: "Nike Dunk SE", description: "Easy On/Off", category: "dunk",price: "$310", imageUrl: "../collections_img/J13.png" },
+        { id: 1, name: "Nike Dunk Low Retro", description: "Men's Shoe", category: "dunk", price: "$150", imageUrl: "../collections_img/J1.png" },
         { id: 2, name: "Nike Dunk Low Retro (Black)", description: "Men's Shoe", category: ["dunk", "new"],price: "$250", imageUrl: "../collections_img/J2.png" },
         { id: 3, name: "Nike Dunk Low Retro (PRO)", description: "Skate Shoe", category: "dunk",price: "$150", imageUrl: "../collections_img/J3.png" },
         { id: 4, name: "Nike Dunk Low Retro SE", description: "Skate Shoe", category: "dunk", price: "$153",imageUrl: "../collections_img/J4.png" },
@@ -48,6 +47,9 @@ $(document).ready(function() {
         { id: 44, name: "Nike Pegasus Elite", description: "Men's Shoe", category: ["sale", "new"], price: "$650", sale: true, originalPrice: "$880", imageUrl: "../collections_img/S9.png" },
         { id: 45, name: "Nike Blazer One", description: "Men's Shoe", category: ["sale", "new"], price: "$220", sale: true, originalPrice: "$420", imageUrl: "../collections_img/S10.png" },
         { id: 46, name: "Nike Agehaozero", description: "Men's Shoe", category: ["sale", "new"], price: "$210", sale: true, originalPrice: "$360", imageUrl: "../collections_img/S11.png" },
+        { id: 47, name: "Nike Dunk SE", description: "Easy Off", category: "dunk",price: "$310", imageUrl: "../collections_img/j3.jpg" },
+        { id: 48, name: "Nike Dunk SXE", description: "Easy On", category: "dunk",price: "$310", imageUrl: "../collections_img/j4.png" },
+
 
     ]; 
     // Function to display products
