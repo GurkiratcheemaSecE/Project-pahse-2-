@@ -1,0 +1,138 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: white; 
+    box-sizing: border-box; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative; 
+    background-color: #f4f4f4;
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #111;
+}
+.btn-primary {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+}
+.btn-primary:hover {
+    font-weight:700;
+    color:black;
+    background-color: white;
+}
+
+.contact-form {
+    background-color: #f4f4f4;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 1rem;
+    border: 2px solid #dddddd;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: #555;
+    margin-top: 2rem;
+}
+
+.contact-form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form button[type="submit"]:hover,
+.faq-accordion a:hover,
+.btn-link:hover {
+    color: green; 
+}
+
+.faq-accordion .card-header {
+    background-color: #333;
+    color: black;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.2rem;
+}
+
+.faq-accordion .card-body {
+    background-color: #ffffff;
+    color: #666;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+.faq-accordion a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-form, .faq-accordion, .navbar {
+        padding: 1rem; 
+        flex-direction: column; 
+    }
+}
+
+/*FAQ TEXT STYLE*/
+.btn-link {
+    background-color: white;
+    color: black;
+    font-family: 'Fira Code', Consolas;
+    font-weight: 900;
+    text-decoration: none;
+}
+/* Footer styling */
+.footer {
+    background-color: white;
+    color: black;
+}
+
+.footer-logo {
+    margin-bottom: 2.5rem;
+}
+
+.footer h5 {
+    font-size: 14px;
+    color: #181a1f;
+    margin-bottom: 2rem;
+}
+
+.footer a {
+    color: #615c57;
+}
+
+.footer a:hover {
+    color: #1a1816;
+}
+
+.card .carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+}
