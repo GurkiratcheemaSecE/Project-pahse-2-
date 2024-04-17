@@ -203,7 +203,7 @@ body, html {
     border-color: whitesmoke;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-secondary:hover {
     color:black;
     font-weight: bolder;
     background-color: white; 
@@ -219,7 +219,10 @@ body, html {
     color: black; 
     font-weight: bold;
 }
-
+.btn-secondary {
+    background-color: green;
+    color:black;
+}
 /*Cart Section */
 #cartSection {
     width: 250px; 
@@ -233,6 +236,10 @@ body, html {
     right: 10px; 
     z-index: 1000; 
 }
+#cartStatus {
+    color: red; 
+}
+
 
 
 .list-group-item {
