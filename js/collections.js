@@ -77,22 +77,41 @@ $(document).ready(function() {
             return `
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     ${product.name}
-                    <span class="badge badge-primary badge-pill">${item.quantity} x ${product.price}</span>
+                    <span>${item.quantity} x ${parseFloat(product.price.substring(1))}</span>
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${item.id})"><i class="fas fa-trash"></i></button>
                 </li>
             `;
         }).join('');
         $('#cart').html(cartHTML);
         updateTotal();
     }
-
+    
     function updateTotal() {
         const total = cart.reduce((acc, item) => {
             const product = products.find(p => p.id === item.id);
-            return acc + (parseFloat(product.price.replace('$', '')) * item.quantity);
+            const itemPrice = parseFloat(product.price.replace('$', ''));
+            return acc + (itemPrice * item.quantity);
         }, 0);
         $('#total').text(total.toFixed(2));
     }
+    
 
+    window.toggleCart = function() {
+        const cartSection = document.getElementById('cartSection');
+        const cartStatus = document.getElementById('cartStatus');  
+    
+        if (cartSection.style.display === 'none' || cartSection.style.display === '') {
+            cartSection.style.display = 'block';
+            cartStatus.textContent = 'Cart ON';  
+            cartStatus.style.color = 'green';    // Change color to green
+        } else {
+            cartSection.style.display = 'none';
+            cartStatus.textContent = 'Cart OFF'; 
+            cartStatus.style.color = 'red';      // Change color to red
+        }
+    }
+    
+    
     window.addToCart = function(productId) {
         const cartItem = cart.find(item => item.id === productId);
         if (cartItem) {
@@ -104,10 +123,17 @@ $(document).ready(function() {
         updateCart();
     };
 
+    window.removeFromCart = function(productId) {
+        const newCart = cart.filter(item => item.id !== productId);
+        cart = newCart;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCart();
+    };
+    
     displayProducts();
     updateCart();
-    
-    // Filter buttons functionality
+    toggleCart();
+    // Filter buttons 
     $('.filter-btn').on('click', function() {
         const filter = $(this).data('filter');
         displayProducts(filter);
