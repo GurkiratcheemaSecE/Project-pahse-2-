@@ -43,10 +43,13 @@
     <main class="container">
         <h1 class="mt-5">Nike Shopping Zone</h1>
         <div class="filter-controls mb-3">
+            <button class="btn btn-secondary" onclick="toggleCart()"><i class="fas fa-shopping-cart"></i></button>
+            <h5 id="cartStatus">Cart ON/OFF</h5>
             <button class="btn btn-primary filter-btn" data-filter="all">All</button>
             <button class="btn btn-primary filter-btn" data-filter="dunk">Dunk</button>
             <button class="btn btn-primary filter-btn" data-filter="af">Air Force</button>
             <button class="btn btn-primary filter-btn" data-filter="max">Air Max</button>
+            <button class="btn btn-primary filter-btn" data-filter="sale">ON SALE</button>
             <button class="btn btn-primary filter-btn" data-filter="new">New Releases</button>
         </div>               
         <div class="row product-grid">
