@@ -147,23 +147,33 @@ body, html {
 }
 
 /* animation for the home title */
+
 .home-title {
+    border-right: solid 3px rgba(0, 0, 0, 0.75);
+    white-space: pre;
+    overflow: hidden;
+    letter-spacing: 0.20rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    color: #181a1f; 
     font-size: 150px; 
-    animation: fade 3s infinite; 
 }
 
-/*  fade animation */
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+.home-title {
+    animation: animated-text 3s steps(300,end) 0.8s infinite normal both,
+               animated-cursor 750ms steps(11,end) infinite;
 }
+/* Keyframes for text animation */
+@keyframes animated-text {
+    from { width: 0; }
+    to { width: 100%; } 
+}
+@keyframes animated-cursor {
+    from { border-color: transparent; }
+    to { border-color: rgba(0, 0, 0, 0.75); }
+}
+
 .card {
     border: 1px solid #ddd; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
