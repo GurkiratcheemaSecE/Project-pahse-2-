@@ -1,0 +1,186 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* General settings*/
+* {
+    box-sizing: border-box;
+}
+
+/* Navbar Customization */
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+
+/* Logo and Nike text in the center */
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #111 !important; /* Making the brand name stand out */
+}
+
+.navbar .sign-in-btn {
+    position: right;
+    right: 1rem; 
+    padding: 0.375rem 0.75rem;
+}
+
+
+/* Home Section */
+.home-section {
+    padding: 6rem 0; 
+    background-color: whitesmoke;
+}
+
+.home-image:hover {
+    transform: scale(1.05);
+}
+
+/* Adjust font sizes and colors */
+.home-title {
+    font-size: 150px;
+    color: #181a1f;
+}
+
+/* Button styling */
+.home-btn {
+    background-color: #111;
+    color: whitesmoke;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+}
+
+.home-btn:hover {
+    background-color: #444;
+}
+
+/* Feature Section */
+.feature-section {
+    font-size: larger;
+    background-color: #181a1f;
+    color: whitesmoke;
+    padding: 5rem 0;
+}
+
+/* Card */
+.card {
+    background: none;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #2e2d2c; 
+}
+
+.btn-primary:hover {
+    background-color: #333;
+}
+
+.card-title, .card-text {
+    color: #fff;
+}
+
+
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url('images/nikewallpaper.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+
+font-size: 80px;
+}
+
+.title {
+font-size: 80px;
+text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* Slogan Section */
+.slogan-section {
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    background-color: #181a1f;
+    color: #bab5b1;
+    text-align: left;
+}
+
+.slogan-section img {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-left: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Footer styling */
+.footer {
+    color: black;
+}
+
+.footer-logo {
+    margin-bottom: 2.5rem;
+}
+
+.footer h5 {
+    font-size: 14px;
+    color: #181a1f;
+    margin-bottom: 2rem;
+}
+
+.footer a {
+    color: #615c57;
+}
+
+.footer a:hover {
+    color: #1a1816;
+}
+
+.card .carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+}
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .navbar {
+    background-color: #222;
+    color: #fff;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .title {
+        font-size: 40px;
+    }
+    /* Add more responsive styles here */
+}
