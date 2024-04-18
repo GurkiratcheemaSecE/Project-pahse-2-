@@ -1,1 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/collection.css">
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" sizes="128x128" href="../images/logo.jpg">
+    <title>Nike - Just Don't Do It!</title>
+</head>
+<body>
+    <!-- Navbar - Updated with Bootstrap classes -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="../pages/index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="../pages/collections.html">Our Collections</a>
+                <a class="nav-item nav-link" href="../pages/athletic.html">Our Alethes</a>
+                <a class="nav-item nav-link" href="../pages/history.html">Our History</a>
+                <a class="nav-item nav-link" href="../pages/shop.html">Shop Now</a>
+                <a class="nav-item nav-link" href="../pages/contact.html">Reach Out / Get Help</a>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary mr-4" data-toggle="modal" data-target="#signInModal">Sign In</button>
+        <button class="mode-toggle">Dark Mode</button>
+    </nav>
 
+    <!-- hero section -->
+     
+    <div class="hero text-light">
+        <h1>our collection</h1>
+        <p>Success isn't given. It's earned. On the track, on the field, in the gym</p>
+    </div>
+
+
+   <!-- collection section -->
+
+   <main class="container">
+    <h1 class="mt-5">filter</h1>
+    <div class="row" id="filter-buttons">
+        <div class="col-12">
+          <button class="btn mb-2 me-1 active bg-dark text-light" data-filter="all">Show all</button>
+          <button class="btn mb-2 mx-1 bg-dark text-light" data-filter="air-forces">air forces</button>
+          <button class="btn mb-2 mx-1 bg-dark text-light" data-filter="dunks">Dunks</button>
+          <button class="btn mb-2 mx-1 bg-dark text-light" data-filter="Air max">Air Max</button>
+  
+  
+  
+
+    <!-- Product grid -->
+    <div class="row" id="filterable-cards">
+        <!-- Product Card 1 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4" data-name="air-forces">
+            <div class="card data-name=air forces">
+                <img src="../collections_img/A9.png" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">NIKE AIR FORCE 1 '07 WHITE</h5>
+                    <p class="card-text text-dark">$150</p>
+                    <a href="#" class="btn btn-primary " data-toggle="modal" data-target="#modalid">More</a>
+                </div>
+            </div>
+        </div>
+           <!-- Product Card 2 -->
+           <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 text-dark " data-name="dunks">
+            <div class="card">
+                <img src="../collections_img/j1.png" class="card-img-top" alt="Nike">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">Nike Dunk Low By You</h5>
+                    <p class="card-text text-dark">$120</p>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalid">More</a>
+                </div>
+            </div>
+        </div>
+
+            <!-- Product Card 3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 text-dark" data-name="air-forces">
+                <div class="card">
+                    <img src="../collections_img/A11.png" class="card-img-top" alt="" data-name="air-forces">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">NIKE AIR FORCE 1 '07 black/gold</h5>
+                        <p class="card-text text-dark">$200</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalid">More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 text-dark" data-name="Air max">
+                <div class="card">
+                    <img src="../collections_img/b7.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark"> Nike Air Max Plus Triple Black Running Shoes</h5>
+                        <p class="card-text text-dark">$150</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalid">More</a>
+                    </div>
+                </div>
+            </div>
+            
+              <!-- Product Card 4 -->
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 text-dark" data-name="dunks">
+                <div class="card">
+                    <img src=" ../collections_img/j3.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">NIKE DUNK LOW COURT PURPLE </h5>
+                        <p class="card-text text-dark">$170</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalid">More</a>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Product Card 4 -->
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 text-dark" data-name="air maxs">
+                <div class="card">
+                    <img src="../collections_img/b8.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Nike Air Max black/white</h5>
+                        <p class="card-text text-dark">$100</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalid">More</a>
+                    </div>
+                </div>
+            </div>
+
+
+              <!-- Product Card 4 -->
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 text-dark" data-name="air-forces">
+                <div class="card">
+                    <img src="../collections_img/A4.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Nike air force 1 low panda</h5>
+                        <p class="card-text text-dark">$130</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalid">More</a>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Product Card 4 -->
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 text-dark" data-name="dunks">
+                <div class="card">
+                    <img src="../collections_img/j7.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Nike Dunk Low SE Light Carbon</h5>
+                        <p class="card-text text-dark">$150</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalid">More</a>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Product Card 4 -->
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 text-dark" data-name="dunks">
+                <div class="card">
+                    <img src="../collections_img/j4.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark"> Nike Dunk Low 'Clear Jade</h5>
+                        <p class="card-text text-dark">$100</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalid">More</a>
+                    </div>
+                </div>
+            </div>
+              <!-- Product Card 4 -->
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 text-dark" data-name="Air max">
+                <div class="card">
+                    <img src="../collections_img/b6.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Nike Air Max Plus</h5>
+                        <p class="card-text text-dark">$100</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalid">More</a>
+                    </div>
+                </div>
+            </div>
+        
+            
+        
+
+    </div>
+</main>
+           
+        <!-- Slogan Section -->
+        <section class="slogan-section py-5 bg-dark text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h2>"Who said man was not meant to fly"</h2>
+                        <p>- Michael Jordan</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="../images/retronike.jpg" alt="Slogan Image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!-- Sign In Modal -->
+        <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <input type="text" id="username" placeholder="Username" class="form-control mb-2">
+                <input type="password" id="password" placeholder="Password" class="form-control mb-2">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="signInBtn">Sign In</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <footer class="footer bg-light py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h5>About Nike</h5>
+                        <p>Empowering athletes everywhere, Nike delivers innovative products, experiences, and services.</p>
+                        <img src="../images/nike-logo.svg" alt="Nike Logo" class="footer-logo" style="max-width: 150px;">
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Join Us</a></li>
+                            <li><a href="#">Our Mission</a></li>
+                            <li><a href="#">Shop Now</a></li>
+                            <li><a href="#">Our Collections</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Follow Us</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Subscribe for Updates</h5>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <button type="submit" class="btn btn-primary mt-3">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col text-center">
+                        <p><a href="#">Legal</a> | <a href="#">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>        
+        
+    </main>
+    <!-- Bootstrap JS and  JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/darkmode.js"></script>
+    <script src="../js/collections2.js"></script>
+</body>
+</html>
