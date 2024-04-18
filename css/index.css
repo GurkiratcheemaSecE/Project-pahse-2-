@@ -20,6 +20,7 @@ body, html {
 /* Logo and Nike text in the center */
 .navbar-brand {
     position: absolute;
+    left: 50%;
     transform: translateX(-50%);
     margin-right: auto;
     font-weight: bold;
