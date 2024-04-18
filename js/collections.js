@@ -1,18 +1,17 @@
 $(document).ready(function() {
     // data for the products
     const products = [
-        { id: 0, name: "Nike Dunk Low Retro", description: "Men's Shoe", category: "dunk", price: "$150", imageUrl: "../collections_img/j1.png" },
-        { id: 1, name: "Nike Dunk SE", description: "Easy On/Off", category: "dunk",price: "$310", imageUrl: "../collections_img/j12.png" },
-        { id: 2, name: "Nike Dunk Low Retro (Black)", description: "Men's Shoe", category: ["dunk", "new"],price: "$250", imageUrl: "../collections_img/j2.png" },
-        { id: 3, name: "Nike Dunk Low Retro (PRO)", description: "Skate Shoe", category: "dunk",price: "$150", imageUrl: "../collections_img/j3.png" },
-        { id: 4, name: "Nike Dunk Low Retro SE", description: "Skate Shoe", category: "dunk", price: "$153",imageUrl: "../collections_img/j4.png" },
-        { id: 5, name: "Nike Dunk Low Retro UNLOCK BY YOU", description: "Men's Shoe", category: "dunk",price: "$310", imageUrl: "../collections_img/j5.jpg" },
-        { id: 6, name: "Nike Dunk Low Retro XXX3", description: "Men's Shoe", category: ["dunk", "new"], price: "$1520",imageUrl: "../collections_img/j6.png" },
-        { id: 7, name: "Nike Dunk Low Retro KARASHTH", description: "Men's Shoe", category: "dunk", price: "$140",imageUrl: "../collections_img/j7.png" },
-        { id: 8, name: "Nike Dunk Low Retro SE", description: "Men's Shoe", category: "dunk", price: "$350", imageUrl: "../collections_img/j8.png" },
+        { id: 1, name: "Nike Dunk Low Retro", description: "Men's Shoe", category: "dunk", price: "$150", imageUrl: "../collections_img/J1.png" },
+        { id: 2, name: "Nike Dunk Low Retro (Black)", description: "Men's Shoe", category: ["dunk", "new"],price: "$250", imageUrl: "../collections_img/J2.png" },
+        { id: 3, name: "Nike Dunk Low Retro (PRO)", description: "Skate Shoe", category: "dunk",price: "$150", imageUrl: "../collections_img/J3.png" },
+        { id: 4, name: "Nike Dunk Low Retro SE", description: "Skate Shoe", category: "dunk", price: "$153",imageUrl: "../collections_img/J4.png" },
+        { id: 5, name: "Nike Dunk Low Retro UNLOCK BY YOU", description: "Men's Shoe", category: "dunk",price: "$310", imageUrl: "../collections_img/J5.jpg" },
+        { id: 6, name: "Nike Dunk Low Retro XXX3", description: "Men's Shoe", category: ["dunk", "new"], price: "$1520",imageUrl: "../collections_img/J6.png" },
+        { id: 7, name: "Nike Dunk Low Retro KARASHTH", description: "Men's Shoe", category: "dunk", price: "$140",imageUrl: "../collections_img/J7.png" },
+        { id: 8, name: "Nike Dunk Low Retro SE", description: "Men's Shoe", category: "dunk", price: "$350", imageUrl: "../collections_img/J8.png" },
         { id: 9, name: "Nike Dunk Low ", description: "Men's Shoe", category: ["dunk", "new"], price: "$110", imageUrl: "../collections_img/j9.png" },
-        { id: 10, name: "Nike Dunk Low KKS", description: "Men's Shoe", category: ["dunk", "new"], price: "$542", imageUrl: "../collections_img/j10.png" },
-        { id: 11, name: "Nike Dunk Low KKXS", description: "Men's Shoe", category: "dunk", price: "$512", imageUrl: "../collections_img/j11.png" },
+        { id: 10, name: "Nike Dunk Low KKS", description: "Men's Shoe", category: ["dunk", "new"], price: "$542", imageUrl: "../collections_img/J10.png" },
+        { id: 11, name: "Nike Dunk Low KKXS", description: "Men's Shoe", category: "dunk", price: "$512", imageUrl: "../collections_img/J11.png" },
         { id: 12, name: "Nike Air Force 1", description: "Men's Shoe", category: "af", price: "$120", imageUrl: "../collections_img/A1.png" },
         { id: 13, name: "Nike Air Force 1 '07", description: "Unisex", category: "af",price: "$210", imageUrl: "../collections_img/A2.png" },
         { id: 14, name: "Nike Air Force 1 X", description: "Men's Shoe", category: "af",price: "$210", imageUrl: "../collections_img/A3.png" },
@@ -48,6 +47,9 @@ $(document).ready(function() {
         { id: 44, name: "Nike Pegasus Elite", description: "Men's Shoe", category: ["sale", "new"], price: "$650", sale: true, originalPrice: "$880", imageUrl: "../collections_img/S9.png" },
         { id: 45, name: "Nike Blazer One", description: "Men's Shoe", category: ["sale", "new"], price: "$220", sale: true, originalPrice: "$420", imageUrl: "../collections_img/S10.png" },
         { id: 46, name: "Nike Agehaozero", description: "Men's Shoe", category: ["sale", "new"], price: "$210", sale: true, originalPrice: "$360", imageUrl: "../collections_img/S11.png" },
+        { id: 47, name: "Nike Dunk SE", description: "Easy Off", category: "dunk",price: "$310", imageUrl: "../collections_img/j3.jpg" },
+        { id: 48, name: "Nike Dunk SXE", description: "Easy On", category: "dunk",price: "$310", imageUrl: "../collections_img/j4.png" },
+
 
     ]; 
     // Function to display products
@@ -77,22 +79,41 @@ $(document).ready(function() {
             return `
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     ${product.name}
-                    <span class="badge badge-primary badge-pill">${item.quantity} x ${product.price}</span>
+                    <span>${item.quantity} x ${parseFloat(product.price.substring(1))}</span>
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${item.id})"><i class="fas fa-trash"></i></button>
                 </li>
             `;
         }).join('');
         $('#cart').html(cartHTML);
         updateTotal();
     }
-
+    
     function updateTotal() {
         const total = cart.reduce((acc, item) => {
             const product = products.find(p => p.id === item.id);
-            return acc + (parseFloat(product.price.replace('$', '')) * item.quantity);
+            const itemPrice = parseFloat(product.price.replace('$', ''));
+            return acc + (itemPrice * item.quantity);
         }, 0);
         $('#total').text(total.toFixed(2));
     }
+    
 
+    window.toggleCart = function() {
+        const cartSection = document.getElementById('cartSection');
+        const cartStatus = document.getElementById('cartStatus');  
+    
+        if (cartSection.style.display === 'none' || cartSection.style.display === '') {
+            cartSection.style.display = 'block';
+            cartStatus.textContent = 'Cart ON';  
+            cartStatus.style.color = 'green';    // Change color to green
+        } else {
+            cartSection.style.display = 'none';
+            cartStatus.textContent = 'Cart OFF'; 
+            cartStatus.style.color = 'red';      // Change color to red
+        }
+    }
+    
+    
     window.addToCart = function(productId) {
         const cartItem = cart.find(item => item.id === productId);
         if (cartItem) {
@@ -104,10 +125,17 @@ $(document).ready(function() {
         updateCart();
     };
 
+    window.removeFromCart = function(productId) {
+        const newCart = cart.filter(item => item.id !== productId);
+        cart = newCart;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCart();
+    };
+    
     displayProducts();
     updateCart();
-    
-    // Filter buttons functionality
+    toggleCart();
+    // Filter buttons 
     $('.filter-btn').on('click', function() {
         const filter = $(this).data('filter');
         displayProducts(filter);
